@@ -7,18 +7,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
-import Showcase from "./pages/Showcase";
 import Collaborating from "./pages/Collaborating";
+import DAppStack from "./pages/dAppStack";
 
 function App() {
   const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<Navbar />}>
         <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/showcase" element={<Showcase />} />
         <Route path="/collaborating" element={<Collaborating />} />
+        <Route path="/dappstack" element={<DAppStack />} />
       </Route>
     )
   );

@@ -18,7 +18,11 @@ const Collaborating = () => {
       link: "https://twitter.com/_Collaborating",
       description:
         "Where projects come to collaborate on Fantom. Whether you need collaboration or want to collaborate, this is where you collaborate on Fantom.",
-      oneTimeCollaboration: ["Build Discord server", "Find collaborators"],
+      oneTimeCollaboration: [
+        "Design and build smart contract architecture to pay collaborators",
+        "Build Discord server",
+        "Help design and build system to verify collaboration",
+      ],
     },
     {
       name: "DAOsigner Apparel",
@@ -38,7 +42,7 @@ const Collaborating = () => {
     },
     {
       name: "DAOlicious",
-      link: "https://twitter.com/DAOlicious",
+      link: "https://twitter.com/_DAOlicious",
       description:
         "A DAO for foodies to collaborate on food projects, but this is for you to decide what this DAO does, so join the Discord and help us decide.",
       permanentJobs: [
@@ -47,7 +51,11 @@ const Collaborating = () => {
         "Marketer",
         "Designer",
       ],
-      oneTimeCollaboration: ["Brainstorm DAO ideas", "Design DAO structure"],
+      oneTimeCollaboration: [
+        "Create logo and banner",
+        "Brainstorm DAO ideas",
+        "Design DAO structure",
+      ],
     },
     {
       name: "Motivate Labs",
@@ -62,8 +70,9 @@ const Collaborating = () => {
       ],
       oneTimeCollaboration: [
         "Design and build website",
-        "Create 3D models",
-        "Develop animations",
+        "Create 3D Collaborator NFTs",
+        "Create our twitter logo",
+        "Create DAOstination NFTs for members",
       ],
     },
     {
@@ -213,74 +222,109 @@ const Collaborating = () => {
   ];
 
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "20px",
-        maxWidth: "1200px",
-        margin: "auto",
-        padding: "20px",
-        marginTop: "5rem",
-      }}
-    >
-      {projects.map((project, index) => (
-        <div
-          key={index}
+    <div>
+      <div
+        style={{
+          maxWidth: "800px",
+          margin: "auto",
+          padding: "20px",
+          color: "var(--header-color)",
+        }}
+      >
+        <h1
           style={{
-            border: "1px solid #ccc",
-            borderRadius: "8px",
-            padding: "20px",
             textAlign: "center",
+            marginTop: "5rem",
+            fontSize: "1.5rem",
+            marginBottom: "1rem",
           }}
         >
-          <h2
-            style={{
-              color: "var(--header-color)",
-              fontSize: "1.5rem",
-              textDecoration: "underline",
-              marginBottom: "1rem",
-            }}
-          >
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              {project.name}
-            </a>
-          </h2>
-          <p
-            style={{
-              color: "var(--description-color)",
-              marginBottom: "1rem",
-            }}
-          >
-            {project.description}
-          </p>
+          Projects Wanting Your Collaboration
+        </h1>
+        <p style={{ color: "var(--description-color)", fontSize: "1rem" }}>
+          Below is a list of projects looking for collaboration opportunities.
+          Each project includes a brief description and a link to their Twitter
+          profile. They are seeking various forms of collaboration, from UI/UX
+          design to smart contract development. If you&apos;re interested in
+          collaborating, please fill out the &quot;form to collaborate&quot;
+          tab.
+        </p>
+      </div>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "20px",
+          maxWidth: "1200px",
+          margin: "auto",
+          padding: "20px",
+          marginTop: "2rem",
+        }}
+      >
+        {projects.map((project, index) => (
           <div
+            key={index}
             style={{
+              border: "1px solid #ccc",
+              borderRadius: "8px",
+              padding: "20px",
               textAlign: "center",
-              color: "var(--description-color)",
-              marginBottom: "1rem",
+              color: "var(--bac2-color)",
             }}
           >
-            <h3 style={{ marginTop: "3rem", fontSize: "1.3rem" }}>
-              Collaboration Needed
-            </h3>
+            <h2
+              style={{
+                color: "var(--header-color)",
+                fontSize: "1.5rem",
+                textDecoration: "underline",
+                marginBottom: "1rem",
+              }}
+            >
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.name}
+              </a>
+            </h2>
+            <p
+              style={{
+                color: "var(--description-color)",
+                marginBottom: "1rem",
+              }}
+            >
+              {project.description}
+            </p>
+            <div
+              style={{
+                textAlign: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <h3
+                style={{
+                  marginTop: "3rem",
+                  fontSize: "1.3rem",
+                  color: "var(--description-color)",
+                }}
+              >
+                Collaboration Wanted
+              </h3>
+            </div>
+            <div
+              style={{
+                textAlign: "left",
+                color: "var(--header-color)",
+                marginBottom: "1rem",
+              }}
+            >
+              <ul style={{ listStyleType: "disc", paddingLeft: "20px" }}>
+                {project.oneTimeCollaboration &&
+                  project.oneTimeCollaboration.map((collab, collabIndex) => (
+                    <li key={collabIndex}>{collab}</li>
+                  ))}
+              </ul>
+            </div>
           </div>
-          <div
-            style={{
-              textAlign: "left",
-              color: "var(--content-color)",
-              marginBottom: "1rem",
-            }}
-          >
-            <ul style={{ paddingLeft: "20px" }}>
-              {project.oneTimeCollaboration &&
-                project.oneTimeCollaboration.map((collab, collabIndex) => (
-                  <li key={collabIndex}>{collab}</li>
-                ))}
-            </ul>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

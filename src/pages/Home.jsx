@@ -4,12 +4,9 @@ export default function Home() {
       <img
         src="Collaborating.png"
         alt="Logo"
-        style={{ maxWidth: "800px", height: "auto", marginTop: "6rem" }}
+        style={{ maxWidth: "500px", height: "auto", marginTop: "6rem" }}
       />
       <div className="text-center">
-        <p style={{ color: "var(--header-color)", fontSize: "2rem" }}>
-          Where you Collaborate on Fantom
-        </p>
         <br />
         <p
           style={{
