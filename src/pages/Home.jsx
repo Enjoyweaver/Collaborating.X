@@ -8,7 +8,7 @@ export default function Home() {
       />
       <div className="text-center">
         <p style={{ color: "var(--header-color)", fontSize: "2rem" }}>
-          Where you come to Collaborate on Fantom
+          Where you Collaborate on Fantom
         </p>
         <br />
         <p

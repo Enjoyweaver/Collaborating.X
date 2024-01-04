@@ -158,28 +158,6 @@ export default function Navbar() {
             </NavLink>
             <NavLink
               className="mr-10 NavLink product"
-              to="/About"
-              activeClassName="active-link"
-            >
-              <div className="effect-1"></div>
-              <div className="effect-2"></div>
-              <span style={{ color: "var(--nav2)", fontSize: "1.2rem" }}>
-                About
-              </span>
-            </NavLink>
-            <NavLink
-              className="mr-10 NavLink product"
-              to="/Showcase"
-              activeClassName="active-link"
-            >
-              <div className="effect-1"></div>
-              <div className="effect-2"></div>
-              <span style={{ color: "var(--nav3)", fontSize: "1.2rem" }}>
-                Showcase
-              </span>
-            </NavLink>
-            <NavLink
-              className="mr-10 NavLink product"
               to="/Collaborating"
               activeClassName="active-link"
             >
@@ -189,6 +167,18 @@ export default function Navbar() {
                 Collaborating
               </span>
             </NavLink>
+            <a
+              className="mr-10 NavLink product"
+              href="https://collaborating.deform.cc/fantom"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="effect-1"></div>
+              <div className="effect-2"></div>
+              <span style={{ color: "var(--nav3)", fontSize: "1.2rem" }}>
+                Form to Collaborate
+              </span>
+            </a>
           </div>
         </nav>
       </header>

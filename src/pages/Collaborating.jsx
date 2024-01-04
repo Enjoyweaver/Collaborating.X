@@ -3,7 +3,7 @@ import React from "react";
 const Collaborating = () => {
   const projects = [
     {
-      name: "DAOstination",
+      name: "DAOstination DAO",
       link: "https://twitter.com/DAOstination",
       founderRoles: ["CTO", "COO", "CEO"],
       permanentJobs: [
@@ -25,14 +25,11 @@ const Collaborating = () => {
         "Marketer",
         "Designer",
       ],
-      oneTimeCollaboration: [
-        "Build Discord server",
-        "Create Twitter logo and banner",
-      ],
+      oneTimeCollaboration: ["Build Discord server"],
       tasks: ["Build Discord server"],
     },
     {
-      name: "DAOsignr Apparel",
+      name: "DAOsigner Apparel",
       link: "https://twitter.com/DAOsignrApparel",
       founderRoles: ["CTO", "COO", "CEO"],
       permanentJobs: [
@@ -42,7 +39,7 @@ const Collaborating = () => {
         "Designer",
       ],
       oneTimeCollaboration: [
-        "Design payment UI",
+        "Design and build crypto payment infrastructure",
         "Create smart contract for payments",
       ],
       tasks: [
@@ -132,6 +129,57 @@ const Collaborating = () => {
         "Collaborate on designing and building a secure, transparent DEX with creator functions",
       ],
     },
+    {
+      name: "Write On DAO",
+      link: "https://twitter.com/WriteOnDAO",
+      founderRoles: ["CTO", "COO", "CEO"],
+      permanentJobs: [
+        "Blockchain engineer",
+        "DEX architect",
+        "Solidity developer",
+      ],
+      oneTimeCollaboration: [
+        "Design secure DEX structure",
+        "Implement DEX features",
+      ],
+      tasks: [
+        "Collaborate on designing and building a secure, transparent DEX with creator functions",
+      ],
+    },
+    {
+      name: "DAOcumentary DAO",
+      link: "https://twitter.com/DAOcumentaryDAO",
+      founderRoles: ["CTO", "COO", "CEO"],
+      permanentJobs: [
+        "Blockchain engineer",
+        "DEX architect",
+        "Solidity developer",
+      ],
+      oneTimeCollaboration: [
+        "Design secure DEX structure",
+        "Implement DEX features",
+      ],
+      tasks: [
+        "Collaborate on designing and building a secure, transparent DEX with creator functions",
+      ],
+    },
+    {
+      name: "inDemniFi",
+      link: "https://twitter.com/inDemniFi",
+      founderRoles: ["CTO", "COO", "CEO"],
+      permanentJobs: [
+        "Blockchain engineer",
+        "DEX architect",
+        "Solidity developer",
+      ],
+      oneTimeCollaboration: [
+        "Design secure DEX structure",
+        "Implement DEX features",
+      ],
+      tasks: [
+        "Collaborate on designing and building a secure, transparent DEX with creator functions",
+      ],
+    },
   ];
 
   return (
@@ -153,21 +201,28 @@ const Collaborating = () => {
             border: "1px solid #ccc",
             borderRadius: "8px",
             padding: "20px",
+            textAlign: "center", // Center aligning text
           }}
         >
-          <h2>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "blue", textDecoration: "underline" }}
-            >
+          <h2
+            style={{
+              color: "var(--header-color)",
+              fontSize: "1.5rem", // Increasing title size
+              textDecoration: "underline",
+            }}
+          >
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
               {project.name}
             </a>
           </h2>
 
-          <div>
-            <h3>Collaboration Wanted</h3>
+          <div
+            style={{
+              textAlign: "left",
+              color: "var(--description-color)",
+              marginBottom: "1rem",
+            }}
+          >
             <ul>
               {project.oneTimeCollaboration.map((collab, collabIndex) => (
                 <li key={collabIndex}>{collab}</li>
