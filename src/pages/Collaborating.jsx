@@ -153,7 +153,7 @@ const Collaborating = () => {
       name: "inDAOpendent",
       link: "https://twitter.com/inDAOpendent",
       description:
-        "A DAO for foodies to collaborate on food projects, but this is for you to decide what this DAO does, so join the Discord and help us decide.",
+        "A DAO for you to decide with to do with, so join the Discord and help us decide.",
 
       oneTimeCollaboration: ["Brainstorm DAO ideas", "Design DAO structure"],
     },
@@ -167,7 +167,8 @@ const Collaborating = () => {
     {
       name: "inDAOment",
       link: "https://twitter.com/inDAOment",
-      description: "A DAO for you to decide what to do with",
+      description:
+        "A DAO for you to decide what to do with though will probably fund DAO startups that propel Fantom forward.",
       permanentJobs: [
         "Lead programmer",
         "Full-stack dev",
@@ -177,7 +178,7 @@ const Collaborating = () => {
       oneTimeCollaboration: ["Brainstorm DAO ideas", "Design DAO structure"],
     },
     {
-      name: "in DAO We Trust",
+      name: "in DAO we Trust",
       link: "https://twitter.com/in_DAO_We_Trust",
       description: "Where DAO's are defined, ranked, and accredited.",
       permanentJobs: [
